@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanzz — TJKT Student · Network, Linux &amp; Cybersecurity</title>
+  <meta name="description" content="Portofolio Vanzz, siswa Teknik Jaringan Komputer dan Telekomunikasi (TJKT) SMK 2 Banjar. Linux, jaringan komputer, dan cybersecurity. Tersedia untuk PKL kelas XII.">
+  <meta name="theme-color" content="#0b0d10">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230b0d10'/><text x='50' y='68' font-size='52' font-family='monospace' fill='%236ee7a8' text-anchor='middle'>v</text></svg>">
+</head>
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--one" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--two" aria-hidden="true"></div>
+
+  <header class="topbar" id="topbar">
+    <div class="container topbar__inner">
+      <a href="#home" class="brand" aria-label="Vanzz — beranda">
+        <span class="brand__mark">&gt;_</span>
+        <span class="brand__name">vanzz<span class="accent">.dev</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navigasi utama">
+        <a href="#home" class="nav__link is-active">Beranda</a>
+        <a href="#about" class="nav__link">Tentang</a>
+        <a href="#skills" class="nav__link">Keahlian</a>
+        <a href="#projects" class="nav__link">Proyek &amp; Lab</a>
+        <a href="#certificates" class="nav__link">Sertifikat</a>
+        <a href="#contact" class="nav__link nav__link--cta">Rekrut PKL</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero section" id="home">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow reveal">Halo, saya</p>
+
+          <h1 class="hero__name reveal">
+            Evan Pratama Putra<span class="accent">.</span>
+          </h1>
+
+          <p class="hero__role reveal">
+            <span class="type-static">Saya </span><span id="typewriter" class="type-text"></span><span class="caret" aria-hidden="true"></span>
+          </p>
+
+          <p class="hero__tagline reveal">
+            Siswa <strong>TJKT XII</strong> di SMK 2 Banjar yang gemar mengulik
+            <em>command line</em>, merakit jaringan, dan mengeksplorasi sisi
+            gelap keamanan siber. Bagi saya, terminal bukan sekadar teks —
+            itu tempat saya berpikir.
+          </p>
+
+          <div class="hero__actions reveal">
+            <a href="#contact" class="btn btn--primary">
+              Rekrut saya untuk PKL
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="assets/CV_Vanzz_TJKT.pdf" class="btn btn--cv" id="cvBtn" download target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+              Unduh CV (PDF)
+              <span class="btn__tag">PDF</span>
+            </a>
+            <a href="#projects" class="btn btn--ghost">Lihat proyek &amp; lab</a>
+          </div>
+
+          <ul class="hero__meta reveal">
+            <li><span class="dot"></span> Terbuka untuk PKL 2026/2027</li>
+            <li><span class="dot dot--amber"></span> Banjar, Jawa Barat</li>
+          </ul>
+        </div>
+
+        <aside class="hero__panel reveal" aria-label="Ringkasan terminal">
+          <div class="win">
+            <div class="win__bar">
+              <span class="win__dot win__dot--r"></span>
+              <span class="win__dot win__dot--y"></span>
+              <span class="win__dot win__dot--g"></span>
+              <span class="win__title">vanzz@tjkt: ~</span>
+            </div>
+            <div class="win__body">
+              <p><span class="c-green">vanzz@smk2</span>:<span class="c-blue">~</span>$ whoami</p>
+              <p class="c-dim">— siswa kelas XII, jurusan TJKT</p>
+              <p><span class="c-green">vanzz@smk2</span>:<span class="c-blue">~</span>$ cat focus.txt</p>
+              <p class="c-dim">jaringan · linux · cybersecurity</p>
+              <p><span class="c-green">vanzz@smk2</span>:<span class="c-blue">~</span>$ uptime --status</p>
+              <p><span class="c-amber">status:</span> siap magang, belajar tanpa henti</p>
+              <p><span class="c-green">vanzz@smk2</span>:<span class="c-blue">~</span>$ <span class="blink">▊</span></p>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Gulir ke bagian berikutnya">
+        <span class="scroll-hint__mouse"><span></span></span>
+        <span class="scroll-hint__label">scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">01 — Tentang saya</p>
+          <h2 class="section__title">Pelajar yang tumbuh dari <span class="accent">terminal</span>.</h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__card reveal">
+            <div class="monogram" aria-hidden="true">EP</div>
+            <div class="about__stats">
+              <div class="stat">
+                <span class="stat__num">XII</span>
+                <span class="stat__label">Kelas TJKT</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">SMK 2</span>
+                <span class="stat__label">Banjar</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">2026</span>
+                <span class="stat__label">Target PKL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__text">
+            <p class="lead reveal">
+              Saya Evan Pratama Putra — siswa <strong>Teknik Jaringan Komputer dan Telekomunikasi</strong>
+              yang paling betah berjam-jam di depan layar hitam.
+            </p>
+            <p class="reveal">
+              Sejak mengenal Linux, saya jadi rajin bereksperimen lewat command line:
+              mengutak-atik servis, menulis skrip kecil, lalu memecahkannya lagi ketika
+              ada yang error. Bagi saya, setiap pesan <code>command not found</code>
+              adalah undangan untuk belajar.
+            </p>
+            <p class="reveal">
+              Di samping itu, saya mulai menyelami <strong>web development dasar</strong>
+              — HTML, CSS, dan JavaScript — supaya bisa menerjemahkan ide menjadi
+              antarmuka yang nyaman dipakai. Ketertarikan terhadap keamanan siber
+              (wargames &amp; CTF) melatih saya berpikir seperti penyerang agar
+              bisa berbuat seperti pembela.
+            </p>
+
+            <div class="chips reveal">
+              <span class="chip">Terminal enthusiast</span>
+              <span class="chip">Self-taught Linux</span>
+              <span class="chip">Lab &amp; home network</span>
+              <span class="chip">CTF learner</span>
+              <span class="chip">Fast learner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">02 — Keahlian</p>
+          <h2 class="section__title">Kemampuan yang terus <span class="accent">dikikis</span> tiap hari.</h2>
+          <p class="section__sub">Angka di bawah bukan titik akhir — itu posisi saya hari ini.</p>
+        </div>
+
+        <div class="skills__grid">
+          <div class="skill-col reveal">
+            <div class="skill">
+              <div class="skill__top">
+                <span class="skill__name">Linux (CLI)</span>
+                <span class="skill__val" data-count="85">0%</span>
+              </div>
+              <div class="bar"><i data-level="85"></i></div>
+              <p class="skill__note">Navigasi filesystem, manajemen paket, servis, &amp; skrip bash harian.</p>
+            </div>
+
+            <div class="skill">
+              <div class="skill__top">
+                <span class="skill__name">Jaringan Komputer</span>
+                <span class="skill__val" data-count="78">0%</span>
+              </div>
+              <div class="bar"><i data-level="78"></i></div>
+              <p class="skill__note">Subnetting, cabling, konfigurasi router/switch, dasar TCP/IP.</p>
+            </div>
+
+            <div class="skill">
+              <div class="skill__top">
+                <span class="skill__name">Pemecahan Masalah / CTF</span>
+                <span class="skill__val" data-count="72">0%</span>
+              </div>
+              <div class="bar"><i data-level="72"></i></div>
+              <p class="skill__note">Debug sistem, analisis log, dan latihan wargame/CTF mingguan.</p>
+            </div>
+          </div>
+
+          <div class="skill-col reveal">
+            <div class="skill">
+              <div class="skill__top">
+                <span class="skill__name">HTML</span>
+                <span class="skill__val" data-count="88">0%</span>
+              </div>
+              <div class="bar"><i data-level="88"></i></div>
+              <p class="skill__note">Struktur semantik yang rapi dan mudah diakses.</p>
+            </div>
+
+            <div class="skill">
+              <div class="skill__top">
+                <span class="skill__name">CSS</span>
+                <span class="skill__val" data-count="80">0%</span>
+              </div>
+              <div class="bar"><i data-level="80"></i></div>
+              <p class="skill__note">Layout responsif, transisi halus, dan tipografi yang enak dibaca.</p>
+            </div>
+
+            <div class="skill">
+              <div class="skill__top">
+                <span class="skill__name">JavaScript</span>
+                <span class="skill__val" data-count="68">0%</span>
+              </div>
+              <div class="bar"><i data-level="68"></i></div>
+              <p class="skill__note">DOM, interaksi UI, dan menyambungkan logika ke halaman statis.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="badges reveal">
+          <span class="badge">Debian / Ubuntu</span>
+          <span class="badge">Bash Script</span>
+          <span class="badge">TCP/IP</span>
+          <span class="badge">Subnetting</span>
+          <span class="badge">Wireshark</span>
+          <span class="badge">Cisco Packet Tracer</span>
+          <span class="badge">Nmap</span>
+          <span class="badge">Git</span>
+          <span class="badge">Apache / Nginx</span>
+          <span class="badge">Basic Pentest</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS & LAB ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">03 — Proyek &amp; Lab</p>
+          <h2 class="section__title">Eksperimen yang pernah <span class="accent">saya bongkar</span>.</h2>
+          <p class="section__sub">Sebagian besar dikerjakan di lab sekolah dan PC rumahan.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__tag">Operating System</div>
+            <h3 class="card__title">Instalasi &amp; Hardening Linux</h3>
+            <p class="card__desc">
+              Instalasi Debian dan Ubuntu Server dari nol, partisi manual,
+              konfigurasi user berhak, firewall dasar, dan evaluasi servis
+              yang tidak diperlukan agar sistem tetap ringan.
+            </p>
+            <ul class="card__stack">
+              <li>Debian 12</li><li>systemd</li><li>UFW</li>
+            </ul>
+            <div class="card__foot"><span class="lvl lvl--lab">Lab</span><span class="card__year">2025</span></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__tag">Networking</div>
+            <h3 class="card__title">Topologi Jaringan Sekolah</h3>
+            <p class="card__desc">
+              Merancang topologi multi-lantai dengan DHCP terpisah per VLAN,
+              routing antar segmen, lalu uji konektivitas end-to-end beserta
+              dokumentasi IP address plan.
+            </p>
+            <ul class="card__stack">
+              <li>Packet Tracer</li><li>VLAN</li><li>DHCP</li>
+            </ul>
+            <div class="card__foot"><span class="lvl lvl--net">Jaringan</span><span class="card__year">2025</span></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__tag">Cybersecurity</div>
+            <h3 class="card__title">Catatan Wargame &amp; CTF</h3>
+            <p class="card__desc">
+              Menyelesaikan tantangan beginner pada platform wargame,
+              mencatat setiap step mulai dari informasi gathering sampai
+              privesc, lalu menyusunnya jadi cheat-sheet pribadi.
+            </p>
+            <ul class="card__stack">
+              <li>Nmap</li><li>Gobuster</li><li>Linux privesc</li>
+            </ul>
+            <div class="card__foot"><span class="lvl lvl--sec">Security</span><span class="card__year">2026</span></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__tag">Web Development</div>
+            <h3 class="card__title">Profil Web Statis Interaktif</h3>
+            <p class="card__desc">
+              Membangun halaman profil murni dengan HTML, CSS, dan JavaScript:
+              navigasi lengket, animasi scroll, validasi formulir, dan tata
+              letak responsif tanpa framework.
+            </p>
+            <ul class="card__stack">
+              <li>HTML5</li><li>CSS Grid</li><li>Vanilla JS</li>
+            </ul>
+            <div class="card__foot"><span class="lvl lvl--web">Web</span><span class="card__year">2026</span></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__tag">Server</div>
+            <h3 class="card__title">Web Server &amp; File Sharing</h3>
+            <p class="card__desc">
+              Deploy situs sederhana diatas Apache, kemudian membagikan folder
+              bersama lewat Samba di jaringan lokal lab supaya bisa diakses
+              dari beberapa perangkat sekaligus.
+            </p>
+            <ul class="card__stack">
+              <li>Apache</li><li>Samba</li><li>Linux</li>
+            </ul>
+            <div class="card__foot"><span class="lvl lvl--lab">Lab</span><span class="card__year">2026</span></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__tag">Automation</div>
+            <h3 class="card__title">Skrip Monitoring Ringan</h3>
+            <p class="card__desc">
+              Skrip bash sederhana yang memantau penggunaan CPU, RAM, dan
+              status layanan, lalu menampilkan laporan rapi di terminal
+              setiap kali dijalankan.
+            </p>
+            <ul class="card__stack">
+              <li>Bash</li><li>crontab</li><li>htop</li>
+            </ul>
+            <div class="card__foot"><span class="lvl lvl--lab">Lab</span><span class="card__year">2026</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATES & BADGES ============ -->
+    <section class="section" id="certificates">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">04 — Sertifikat &amp; Pencapaian</p>
+          <h2 class="section__title">Jejak belajar yang <span class="accent">terdokumentasi</span>.</h2>
+          <p class="section__sub">Klik salah satu gambar untuk melihat sertifikat dalam ukuran penuh.</p>
+        </div>
+
+        <div class="certs">
+          <article class="cert reveal">
+            <button class="cert__media" type="button"
+                    data-lightbox
+                    data-src="assets/sertifikat-jaringan.jpg"
+                    data-title="Jaringan Komputer &amp; Subnetting"
+                    data-meta="Penerbit: SMK Negeri 2 Banjar · Februari 2026"
+                    aria-label="Perbesar sertifikat Jaringan Komputer dan Subnetting">
+              <img src="assets/sertifikat-jaringan.jpg" alt="Sertifikat Jaringan Komputer dan Subnetting" loading="lazy">
+              <span class="cert__zoom" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>
+              </span>
+            </button>
+            <div class="cert__body">
+              <div class="cert__head">
+                <span class="lvl lvl--net">Networking</span>
+                <span class="cert__date">Feb 2026</span>
+              </div>
+              <h3 class="cert__title">Jaringan Komputer &amp; Subnetting</h3>
+              <p class="cert__issuer">SMK Negeri 2 Banjar</p>
+            </div>
+          </article>
+
+          <article class="cert reveal">
+            <button class="cert__media" type="button"
+                    data-lightbox
+                    data-src="assets/sertifikat-linux.jpg"
+                    data-title="Linux Command Line Essentials"
+                    data-meta="Penerbit: SMK Negeri 2 Banjar · November 2025"
+                    aria-label="Perbesar sertifikat Linux Command Line Essentials">
+              <img src="assets/sertifikat-linux.jpg" alt="Sertifikat Linux Command Line Essentials" loading="lazy">
+              <span class="cert__zoom" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>
+              </span>
+            </button>
+            <div class="cert__body">
+              <div class="cert__head">
+                <span class="lvl lvl--lab">Linux / CLI</span>
+                <span class="cert__date">Nov 2025</span>
+              </div>
+              <h3 class="cert__title">Linux Command Line Essentials</h3>
+              <p class="cert__issuer">SMK Negeri 2 Banjar</p>
+            </div>
+          </article>
+
+          <article class="cert reveal">
+            <button class="cert__media" type="button"
+                    data-lightbox
+                    data-src="assets/sertifikat-ccna.jpg"
+                    data-title="CCNA — Introduction to Networks"
+                    data-meta="Penerbit: Cisco Networking Academy · 2026"
+                    aria-label="Perbesar sertifikat CCNA Introduction to Networks">
+              <img src="assets/sertifikat-ccna.jpg" alt="Sertifikat CCNA Introduction to Networks" loading="lazy">
+              <span class="cert__zoom" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>
+              </span>
+            </button>
+            <div class="cert__body">
+              <div class="cert__head">
+                <span class="lvl lvl--net">Cisco</span>
+                <span class="cert__date">2026</span>
+              </div>
+              <h3 class="cert__title">CCNA — Introduction to Networks</h3>
+              <p class="cert__issuer">Cisco Networking Academy</p>
+            </div>
+          </article>
+
+          <article class="cert reveal">
+            <button class="cert__media" type="button"
+                    data-lightbox
+                    data-src="assets/sertifikat-tryhackme.jpg"
+                    data-title="Pre Security Path"
+                    data-meta="Penerbit: TryHackMe · 2026"
+                    aria-label="Perbesar sertifikat TryHackMe Pre Security Path">
+              <img src="assets/sertifikat-tryhackme.jpg" alt="Sertifikat TryHackMe Pre Security Path" loading="lazy">
+              <span class="cert__zoom" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>
+              </span>
+            </button>
+            <div class="cert__body">
+              <div class="cert__head">
+                <span class="lvl lvl--sec">Cybersecurity</span>
+                <span class="cert__date">2026</span>
+              </div>
+              <h3 class="cert__title">Pre Security Path</h3>
+              <p class="cert__issuer">TryHackMe</p>
+            </div>
+          </article>
+
+          <article class="cert reveal">
+            <button class="cert__media" type="button"
+                    data-lightbox
+                    data-src="assets/sertifikat-packettracer.jpg"
+                    data-title="Networking Basics dengan Packet Tracer"
+                    data-meta="Penerbit: Cisco Networking Academy · 2025"
+                    aria-label="Perbesar sertifikat Networking Basics Packet Tracer">
+              <img src="assets/sertifikat-packettracer.jpg" alt="Sertifikat Networking Basics Packet Tracer" loading="lazy">
+              <span class="cert__zoom" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>
+              </span>
+            </button>
+            <div class="cert__body">
+              <div class="cert__head">
+                <span class="lvl lvl--lab">Lab</span>
+                <span class="cert__date">2025</span>
+              </div>
+              <h3 class="cert__title">Networking Basics (Packet Tracer)</h3>
+              <p class="cert__issuer">Cisco Networking Academy</p>
+            </div>
+          </article>
+
+          <article class="cert reveal">
+            <button class="cert__media" type="button"
+                    data-lightbox
+                    data-src="assets/sertifikat-webdev.jpg"
+                    data-title="Web Development Dasar"
+                    data-meta="Penerbit: SMK Negeri 2 Banjar · Januari 2026"
+                    aria-label="Perbesar sertifikat Web Development Dasar">
+              <img src="assets/sertifikat-webdev.jpg" alt="Sertifikat Web Development Dasar" loading="lazy">
+              <span class="cert__zoom" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>
+              </span>
+            </button>
+            <div class="cert__body">
+              <div class="cert__head">
+                <span class="lvl lvl--web">Web</span>
+                <span class="cert__date">Jan 2026</span>
+              </div>
+              <h3 class="cert__title">Web Development Dasar</h3>
+              <p class="cert__issuer">SMK Negeri 2 Banjar</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">05 — Kontak</p>
+          <h2 class="section__title">Butuh siswa PKL yang <span class="accent">rajin ngulik</span>?</h2>
+          <p class="section__sub">
+            Saya siap ditempatkan di tim jaringan, sysadmin, atau support —
+            dan saya belajar cepat.
+          </p>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__info reveal">
+            <div class="cta-card">
+              <span class="cta-card__pulse" aria-hidden="true"></span>
+              <p class="cta-card__kicker">Status</p>
+              <p class="cta-card__title">Terbuka untuk penempatan PKL kelas XII</p>
+              <p class="cta-card__desc">
+                Periode 2026/2027 · durasi mengikuti kalender sekolah ·
+                domisili Banjar &amp; sekitarnya, siap ditempatkan di luar kota
+                bila ada pendampingan.
+              </p>
+              <a href="#form" class="btn btn--primary btn--block">
+                Kirim undangan interview
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+
+            <ul class="contact__list">
+              <li>
+                <span class="contact__icon" aria-hidden="true">@</span>
+                <div>
+                  <span class="contact__label">Email</span>
+                  <a href="mailto:vanzzz@smkn2banjar.sch.id">vanzzz@smkn2banjar.sch.id</a>
+                </div>
+              </li>
+              <li>
+                <span class="contact__icon" aria-hidden="true">#</span>
+                <div>
+                  <span class="contact__label">WhatsApp</span>
+                  <a href="https://wa.me/6285692080961" target="_blank" rel="noopener">+62 856-9208-0961</a>
+                </div>
+              </li>
+              <li>
+                <span class="contact__icon" aria-hidden="true">~</span>
+                <div>
+                  <span class="contact__label">Lokasi</span>
+                  <span>Banjar, Jawa Barat</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <form class="form reveal" id="form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <!-- ===== Web3Forms: tempel access_key Anda di value bawah ===== -->
+            <input type="hidden" name="access_key" id="accessKey" value="33c27deb-aa3e-416d-b7af-04de10327f6e">
+            <input type="hidden" name="from_name" value="Website Portofolio Vanzz">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="form__row">
+              <div class="field">
+                <label for="name">Nama lengkap / nama perusahaan</label>
+                <input type="text" id="name" name="name" placeholder="PT. Contoh Jaringan" autocomplete="organization" required>
+                <small class="field__err"></small>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="hr@perusahaan.com" autocomplete="email" required>
+                <small class="field__err"></small>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="subject">Keperluan</label>
+              <select id="subject" name="subject">
+                <option>Penempatan PKL / Magang</option>
+                <option>Lowongan kerja junior</option>
+                <option>Kerja sama proyek</option>
+                <option>Lainnya</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Pesan</label>
+              <textarea id="message" name="message" rows="5" placeholder="Ceritakan singkat tentang posisi atau proyek yang ditawarkan…" required></textarea>
+              <small class="field__err"></small>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block" id="submitBtn">
+              <span class="btn__spin" aria-hidden="true"></span>
+              <span class="btn__label">Kirim pesan</span>
+            </button>
+
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+            <p class="form__note">Pesan diteruskan otomatis ke vanzzz@smkn2banjar.sch.id.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> Vanzz — dibuat sendiri dengan HTML, CSS &amp; JavaScript.</p>
+      <p class="footer__note">Siswa TJKT · SMK 2 Banjar</p>
+      <a href="#home" class="footer__top">Kembali ke atas ↑</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ============ LIGHTBOX SERTIFIKAT ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau sertifikat" hidden>
+    <div class="lightbox__backdrop" data-lightbox-close></div>
+    <figure class="lightbox__inner">
+      <button class="lightbox__close" type="button" data-lightbox-close aria-label="Tutup pratinjau">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="lightbox__frame">
+        <img class="lightbox__img" id="lightboxImg" alt="">
+      </div>
+      <figcaption class="lightbox__cap">
+        <span class="lightbox__title" id="lightboxTitle"></span>
+        <span class="lightbox__meta" id="lightboxMeta"></span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <!-- ============ TOMBOL WHATSAPP MELAYANG ============ -->
+  <a class="wa-float" id="waFloat"
+     href="https://wa.me/6285692080961?text=Halo%20Vanzz,%20saya%20tertarik%20dengan%20portofolio%20Anda"
+     target="_blank" rel="noopener" aria-label="Chat WhatsApp Vanzz">
+    <span class="wa-float__ring" aria-hidden="true"></span>
+    <svg class="wa-float__icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M16.02 3.2c-7.06 0-12.8 5.73-12.8 12.79 0 2.26.6 4.46 1.73 6.4L3.1 28.9l6.67-1.76a12.8 12.8 0 0 0 6.25 1.6h.01c7.05 0 12.79-5.74 12.79-12.8 0-3.42-1.33-6.63-3.75-9.04a12.7 12.7 0 0 0-9.05-3.7Zm0 23.4h-.01c-1.99 0-3.94-.53-5.64-1.54l-.4-.24-4.02 1.05 1.07-3.92-.26-.4a10.6 10.6 0 0 1-1.63-5.67c0-5.87 4.78-10.64 10.65-10.64 2.84 0 5.51 1.11 7.52 3.12a10.57 10.57 0 0 1 3.11 7.53c0 5.87-4.78 10.64-10.65 10.64Zm5.84-7.97c-.32-.16-1.89-.93-2.18-1.04-.29-.11-.5-.16-.71.16-.21.32-.82 1.04-1 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.89-1.78-2.21-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.54-.71-.55l-.61-.01c-.21 0-.56.08-.85.4-.29.32-1.11 1.09-1.11 2.65s1.14 3.08 1.3 3.29c.16.21 2.24 3.42 5.43 4.8.76.33 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.89-.77 2.16-1.52.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.61-.37Z"/>
+    </svg>
+    <span class="wa-float__tip">Chat saya</span>
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
